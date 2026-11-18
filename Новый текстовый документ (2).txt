@@ -1,0 +1,46 @@
+#include "Autorization.hpp"
+
+
+void Start()
+{
+    while (true)
+    {
+        if (Login())
+        {
+            
+            system("pause");
+        }
+    }
+}
+
+bool Login()
+{
+    std::wstring login, pass;
+
+    while (true)
+    {
+        system("cls");
+        std::wcout << L"\n Welcome \n\n\t\t\t   SellDrink\n\n\n";
+        std::wcout << L"Введите логин или \"exit\" для выхода: ";
+        Getline(login);
+
+        if (login == L"exit")
+        {
+            return false;
+        }
+        std::wcout << L"Введите пароль: ";
+        Getline(pass);
+
+        for (size_t i = 0; i < userSize; i++)
+        {
+            if (login == loginArr[i] && pass == passArr[i])
+        }
+
+        if (login == L"admindrink" && pass == L"notu123")
+            return true;
+            
+        std::wcout << L"\nневерный логин или пароль\n";
+
+      
+    }
+}

@@ -1,0 +1,6 @@
+system("cls");
+std::wcout << L"\nУспешный вход в SellDrink!\n";
+
+
+
+  Sleep(1500);
